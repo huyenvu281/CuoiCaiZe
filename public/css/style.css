@@ -970,6 +970,10 @@ a.nivo-prevNav {background:url(../img/slide-next-prev.png) left no-repeat;left:5
 	text-decoration:none!important;
 }
 
+.fb-comments {
+	display: block;
+}
+
 /*-------------------------------------------------------------------------------------------------*/
 		/* pretty photo */
 /*-------------------------------------------------------------------------------------------------*/

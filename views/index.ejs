@@ -6,16 +6,6 @@
 <meta property="fb:app_id" content="1801711103178830" />
 <meta property="fb:admins" content="684361711630159"/>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=1801711103178830";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -51,6 +41,15 @@ $(document).ready(function () {
 </script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=1801711103178830";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 <div class="header">
   <div id="site_title"><a href="index.ejs"><img src="img/logo.png" alt=""></a></div>
   <!-- Main Menu -->
@@ -101,7 +100,7 @@ $(document).ready(function () {
           <img src="img/demo/1.jpg" alt="">
         </div>
         <div class="col-md-6" style="display: block">
-          <div style="display: block" class="fb-comments" data-width="100%" data-numposts="5"></div>
+          <div style="display: block" class="fb-comments" data-width="100%" data-numposts="10"></div>
         </div>
       </div>
       <div> <img src="img/demo/2.jpg" alt="">
