@@ -46,7 +46,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(app.get('port'), function () {
-    console.log('Express Finance listening on port 9093!')
+    console.log('Application listening on port 9093!')
 })
 
 module.exports = app;
