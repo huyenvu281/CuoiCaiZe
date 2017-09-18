@@ -38,16 +38,26 @@ $(document).ready(function () {
         return false;
     });
 
-    var content_home = '<%= content %>';
-    console.log(content_home);
+    var data = {};
+    data.title = "Get Index Data";
+    data.message = "Message";
+    $.ajax({
+        type: 'POST',
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        dataType:'json',
+        url: 'http://localhost:9093/getIndex',
+        success: function(data) {
+            console.log('success');
+            console.log(JSON.stringify(data));
+        },
+        error: function(error) {
+            console.log("some error in fetching the notifications");
+        }
 
+    });
 });
-$.ajax({
-    url: '/',
-    complete: function(data) {
 
-    }
-});
 </script>
 </head>
 <body>

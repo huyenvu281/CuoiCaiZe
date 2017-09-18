@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var uuid = require('uuid');
 var modelContent = require("../model/content");
 
-var connection = mysql.createConnection({
+var con = mysql.createConnection({
     //Properties...
     host:'127.0.0.1',
     user:'root',
@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
     database: 'cuoicaize'
 });
 
-connection.connect(function (error) {
+con.connect(function (error) {
     if(error)
         throw error;
     else
@@ -25,16 +25,16 @@ var methods = {
         var sql = "INSERT INTO content (Content_ID, Content_User_ID, Content_Type, Content_Title, Content_Detail, Content_Del, Content_Note) " +
             "VALUES ('" + uuid_v4 + "', 'USER', 'TYPE', 'TITLE', 'DETAIL', 'DEL', 'NOTE')";
         console.log(sql);
-        connection.query(sql, function (err, result) {
+        con.query(sql, function (err, result) {
             if (err) throw err;
             console.log("1 record inserted");
         })
     },
 
-    selectContentHomePage: function () {
-        var sql = "SELECT * FROM content ";
+    selectContentHomePage: function (start, to) {
+        var sql = "SELECT * FROM content LIMIT " + start + " , " + to;
         console.log(sql);
-        connection.query(sql, function (err, result) {
+        con.query(sql, function (err, result) {
             if (err) throw err;
             modelContent.data = result;
         });
